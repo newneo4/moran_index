@@ -1,0 +1,11 @@
+streamlit
+geopandas
+libpysal
+esda
+matplotlib
+mapclassify
+numpy
+pandas
+folium
+streamlit-folium
+plotly
