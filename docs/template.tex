@@ -1,0 +1,205 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{geometry}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{geometry}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{setspace}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{float}
+\usepackage{colortbl}
+\usepackage{amsmath}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{setspace}
+\usepackage[a4paper, margin=2.5cm]{geometry}
+
+% ---- Margenes ----
+\geometry{top=2.2cm, bottom=2.2cm, left=3cm, right=2.5cm}
+
+% ---- Interlineado ----
+\setstretch{1.12}
+
+% ---- Colores ----
+\definecolor{rojoras}{RGB}{160,35,25}
+\definecolor{grisclaro}{RGB}{242,242,242}
+\definecolor{verdest}{RGB}{0,110,60}
+
+% ---- Encabezado ----
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\small\textit{PRESENTACION DE RESULTADOS DEL PIPELINE}}
+\rhead{\small\textit{UNA Puno, 2026}}
+\cfoot{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+% ---- Formato de secciones ----
+\titleformat{\section}{\large\bfseries\color{azulsis}}{}{0em}{}%
+  [\vspace{-5pt}\rule{\linewidth}{0.5pt}\vspace{1pt}]
+\titleformat{\subsection}{\normalsize\bfseries\itshape}{}{0em}{}
+\titlespacing{\section}{0pt}{9pt}{3pt}
+\titlespacing{\subsection}{0pt}{5pt}{2pt}
+
+% ---- Hiperlinks ----
+\hypersetup{colorlinks=true, linkcolor=azulsis, citecolor=azulsis, urlcolor=azulsis}
+
+% ---- Espaciado de parrafos ----
+\setlength{\parskip}{3.5pt}
+\setlength{\parindent}{1em}
+
+
+\begin{document}
+\thispagestyle{empty}
+
+\begin{center}
+
+% ===== UNIVERSIDAD =====
+{\large \textbf{UNIVERSIDAD NACIONAL DEL ALTIPLANO}}\\[0.2cm]
+{\normalsize Facultad de Ingeniería Estadistica e Informatica}\\
+{\normalsize Escuela Profesional de Ingeniería Estadistica e Informatica}\\[1.2cm]
+
+% ===== LOGO =====
+\includegraphics[width=4cm]{logo_2.png}\\[1.2cm] % <-- cambia el nombre del archivo
+
+% ===== TÍTULO =====
+\begin{spacing}{1.2}
+{\LARGE \textbf{Resolución de Ejercicios: La Variable Aleatoria Gaussiana}}\\[0.2cm]
+\end{spacing}
+
+\vspace{1.2cm}
+\rule{12cm}{0.8pt}
+\vspace{1.2cm}
+
+% ===== DATOS =====
+\begin{tabular}{rl}
+\textbf{Autor:}   & Noe Ulises Machaca Chambilla \\[0.3cm]
+\textbf{Docente:} & Fred Torres Cruz    \\[0.3cm]
+\textbf{Curso:}   & Estadistica Espacial    \\[0.3cm]
+\end{tabular}
+
+\vfill
+
+% ===== LUGAR Y FECHA =====
+{\normalsize Puno -- Perú}\\
+{\normalsize Abril, 2026}
+
+\end{center}
+
+\newpage
+\section{Introducción}
+Este documento presenta la resolución paso a paso de los 5 ejercicios propuestos sobre la Variable Aleatoria Gaussiana (Distribución Normal). Se utilizan las propiedades de estandarización y la regla empírica para el análisis de cada caso.
+
+\section{Ejercicio 1: Detección de anomalías en sensores IoT}
+\textbf{Contexto:} $X \sim N(70, 5^2)$, donde $\mu = 70$ y $\sigma = 5$. Anomalía si $X \notin [\mu-3\sigma, \mu+3\sigma]$.
+
+\subsection{(a) Intervalo numérico de lectura normal}
+\begin{itemize}
+    \item Límite inferior: $\mu - 3\sigma = 70 - 3(5) = 70 - 15 = 55^\circ$C.
+    \item Límite superior: $\mu + 3\sigma = 70 + 3(5) = 70 + 15 = 85^\circ$C.
+\end{itemize}
+\textbf{Resultado:} El intervalo de lectura normal es $[55, 85]^\circ$C.
+
+\subsection{(b) Cálculo de $P(X > 82)$ y decisión de alerta}
+Estandarizamos el valor $x = 82$:
+\[ Z = \frac{x - \mu}{\sigma} = \frac{82 - 70}{5} = \frac{12}{5} = 2.4 \]
+Calculamos la probabilidad:
+\[ P(X > 82) = P(Z > 2.4) = 1 - P(Z \leq 2.4) \approx 1 - 0.9918 = 0.0082 \text{ (0.82\%)} \]
+\textbf{Decisión:} Una lectura de $82^\circ$C está dentro del intervalo $[55, 85]$, por lo que técnicamente no es una anomalía extrema, pero es un valor alto (solo el 0.82\% de las lecturas son superiores). No debería disparar la alerta de "anomalía" según la regla estricta de $3\sigma$.
+
+\subsection{(c) Porcentaje de anomalías según la regla empírica}
+La regla 68-95-99.7 indica que el 99.7\% de los datos están dentro de $\pm 3\sigma$.
+\[ \text{Porcentaje de anomalías} = 100\% - 99.7\% = 0.3\% \]
+
+\newpage
+
+\section{Ejercicio 2: Umbrales de clasificación en modelos de crédito}
+\textbf{Contexto:} $X \sim N(650, 80^2)$, donde $\mu = 650$ y $\sigma = 80$. Alto riesgo si $X < 550$.
+
+\subsection{(a) Estandarización del umbral 550}
+\[ Z = \frac{550 - 650}{80} = \frac{-100}{80} = -1.25 \]
+
+\subsection{(b) Cálculo de $P(X < 550)$}
+Utilizando la tabla de la normal estándar:
+\[ P(X < 550) = P(Z < -1.25) = P(Z > 1.25) = 1 - P(Z < 1.25) \approx 1 - 0.8944 = 0.1056 \]
+\textbf{Resultado:} El 10.56\% de la cartera es de alto riesgo.
+
+\subsection{(c) Umbral para que el 5\% sea de alto riesgo}
+Buscamos $T$ tal que $P(X < T) = 0.05$. Sabemos que $P(Z < -1.645) \approx 0.05$.
+\[ \frac{T - 650}{80} = -1.645 \implies T = 650 + (-1.645 \times 80) = 650 - 131.6 = 518.4 \]
+\textbf{Resultado:} El nuevo umbral debería ser 518.4 puntos.
+
+\vspace{1em}
+
+\newpage
+\section{Ejercicio 3: Control de calidad en predicciones}
+\textbf{Contexto:} $\epsilon \sim N(0, 200^2)$, donde $\mu = 0$ y $\sigma = 200$. Inaceptable si $|\epsilon| > 400$.
+
+\subsection{(a) Probabilidad de un error inaceptable $P(|\epsilon| > 400)$}
+\[ P(|\epsilon| > 400) = P(\epsilon > 400) + P(\epsilon < -400) \]
+Estandarizamos 400: $Z = \frac{400 - 0}{200} = 2$.
+\[ P(|\epsilon| > 400) = 2 \times P(Z > 2) = 2 \times (1 - P(Z \leq 2)) \approx 2 \times (1 - 0.9772) = 0.0456 \]
+\textbf{Resultado:} La probabilidad es de 4.56\%.
+
+\subsection{(b) Predicciones inaceptables esperadas en 30 días}
+\[ E[Y] = n \times p = 30 \times 0.0456 = 1.368 \]
+\textbf{Resultado:} Se esperan aproximadamente 1.37 predicciones inaceptables al mes.
+
+\subsection{(c) Cambio en la probabilidad si $\sigma = 120$}
+Nuevo $Z = \frac{400}{120} = 3.33$.
+\[ P(|\epsilon| > 400) = 2 \times P(Z > 3.33) \approx 2 \times (1 - 0.9996) = 0.0008 \]
+\textbf{Resultado:} La probabilidad baja drásticamente al 0.08\%.
+
+\vspace{1em}
+\newpage
+
+\section{Ejercicio 4: Muestreo y representatividad}
+\textbf{Contexto:} $X \sim N(34, 9^2)$, donde $\mu = 34$ y $\sigma = 9$.
+
+\subsection{(a) Probabilidad de edad entre 25 y 43 años}
+Estandarizamos los límites:
+\[ Z_1 = \frac{25 - 34}{9} = -1, \quad Z_2 = \frac{43 - 34}{9} = 1 \]
+Por la regla empírica, el intervalo $[\mu-\sigma, \mu+\sigma]$ contiene el 68.27\% de los datos.
+\textbf{Resultado:} $P(25 < X < 43) \approx 0.6827$.
+
+\subsection{(b) Puntuación Z para 55 años e interpretación}
+\[ Z = \frac{55 - 34}{9} = \frac{21}{9} \approx 2.33 \]
+\textbf{Interpretación:} Es un valor atípico moderado, ya que se encuentra a más de 2 desviaciones estándar de la media (solo aproximadamente el 1\% de los usuarios tienen más de 55 años).
+
+\subsection{(c) Edad para el 10\% más mayor}
+Buscamos $T$ tal que $P(X > T) = 0.10 \iff P(X < T) = 0.90$.
+Sabemos que $P(Z < 1.28) \approx 0.90$.
+\[ \frac{T - 34}{9} = 1.28 \implies T = 34 + (1.28 \times 9) = 34 + 11.52 = 45.52 \]
+\textbf{Resultado:} El 10\% más mayor tiene más de 45.52 años.
+
+\vspace{1em}
+\newpage
+
+\section{Ejercicio 5: Tiempos de respuesta en sistemas}
+\textbf{Contexto:} $X \sim N(120, 25^2)$, donde $\mu = 120$ y $\sigma = 25$.
+
+\subsection{(a) $P(X > 170)$ y rareza del evento}
+\[ Z = \frac{170 - 120}{25} = \frac{50}{25} = 2 \]
+\[ P(X > 170) = P(Z > 2) = 1 - 0.9772 = 0.0228 \]
+\textbf{Resultado:} La probabilidad es del 2.28\%. No es extremadamente raro, pero ocurre menos de 3 veces cada 100 solicitudes.
+
+\subsection{(b) Valor de T para el SLA del 99\%}
+$P(X < T) = 0.99 \implies Z = 2.326$.
+\[ \frac{T - 120}{25} = 2.326 \implies T = 120 + (2.326 \times 25) = 120 + 58.15 = 178.15 \text{ ms.} \]
+
+\subsection{(c) Cambio en T si la varianza se duplica ($\sigma^2 = 1250$)}
+Nueva $\sigma = \sqrt{1250} \approx 35.35$.
+\[ T = 120 + (2.326 \times 35.35) = 120 + 82.22 = 202.22 \text{ ms.} \]
+\textbf{Resultado:} El umbral $T$ aumenta a 202.22 ms.
+
+\end{document}
