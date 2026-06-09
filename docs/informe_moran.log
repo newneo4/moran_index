@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2026.4.23)  8 JUN 2026 20:06
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2026.4.23)  8 JUN 2026 22:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**docs/informe_moran.tex
-(./docs/informe_moran.tex
+**informe_moran.tex
+(./informe_moran.tex
 LaTeX2e <2022-11-01> patch level 1
 L3 programming layer <2023-02-22>
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
@@ -412,7 +412,7 @@ File: l3backend-pdftex.def 2023-01-16 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count293
 \l__pdf_internal_box=\box59
 )
-(docs/informe_moran.aux)
+(./informe_moran.aux)
 \openout1 = `informe_moran.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 59.
@@ -492,10 +492,15 @@ e
 ))
 Package hyperref Info: Link coloring ON on input line 59.
 
-(docs/informe_moran.out) (docs/informe_moran.out)
+(./informe_moran.out) (./informe_moran.out)
 \@outlinefile=\write3
 \openout3 = `informe_moran.out'.
 
+<images/logo_2.png, id=60, 235.88126pt x 254.9525pt>
+File: images/logo_2.png Graphic file (type png)
+<use images/logo_2.png>
+Package pdftex.def Info: images/logo_2.png  used on input line 71.
+(pdftex.def)             Requested size: 113.81102pt x 123.0138pt.
 LaTeX Font Info:    Trying to load font information for U+msa on input line 84.
 
 
@@ -510,20 +515,21 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texlive/texmf-di
-st/fonts/enc/dvips/cm-super/cm-super-t1.enc}] [2] [3{/usr/share/texlive/texmf-d
-ist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}] [4] [5] [6
+st/fonts/enc/dvips/cm-super/cm-super-t1.enc} <./images/logo_2.png>] [2] [3{/usr
+/share/texlive/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}] [4] [5] [
+6
 pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) ha
 s been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
 l.205 \newpage
               ]
-<images/contexto_dataset.png, id=111, 1927.2pt x 964.60374pt>
+<images/contexto_dataset.png, id=113, 1927.2pt x 964.60374pt>
 File: images/contexto_dataset.png Graphic file (type png)
 <use images/contexto_dataset.png>
 Package pdftex.def Info: images/contexto_dataset.png  used on input line 216.
 (pdftex.def)             Requested size: 441.01773pt x 220.73558pt.
-<images/mapa_interactivo.png, id=113, 1927.2pt x 964.60374pt>
+<images/mapa_interactivo.png, id=115, 1927.2pt x 964.60374pt>
 File: images/mapa_interactivo.png Graphic file (type png)
 <use images/mapa_interactivo.png>
 Package pdftex.def Info: images/mapa_interactivo.png  used on input line 226.
@@ -534,13 +540,13 @@ s been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
 l.230 
-       <docs/images/contexto_dataset.png (PNG copy)>]
-<images/step2_scatterplot.png, id=122, 1927.2pt x 964.60374pt>
+       <./images/contexto_dataset.png (PNG copy)>]
+<images/step2_scatterplot.png, id=124, 1927.2pt x 964.60374pt>
 File: images/step2_scatterplot.png Graphic file (type png)
 <use images/step2_scatterplot.png>
 Package pdftex.def Info: images/step2_scatterplot.png  used on input line 236.
 (pdftex.def)             Requested size: 418.96548pt x 209.6966pt.
-<images/step3_lisa.png, id=124, 1927.2pt x 964.60374pt>
+<images/step3_lisa.png, id=126, 1927.2pt x 964.60374pt>
 File: images/step3_lisa.png Graphic file (type png)
 <use images/step3_lisa.png>
 Package pdftex.def Info: images/step3_lisa.png  used on input line 246.
@@ -557,20 +563,20 @@ s been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
 l.250 
-       <docs/images/mapa_interactivo.png (PNG copy)> <docs/images/step2_scatter
-plot.png (PNG copy)>] [9
+       <./images/mapa_interactivo.png (PNG copy)> <./images/step2_scatterplot.p
+ng (PNG copy)>] [9
 pdfTeX warning (ext4): destination with the same identifier (name{figure.5}) ha
 s been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
 l.251 \newpage
-               <docs/images/step3_lisa.png (PNG copy)>]
-<images/sids_step2.png, id=137, 1927.2pt x 964.60374pt>
+               <./images/step3_lisa.png (PNG copy)>]
+<images/sids_step2.png, id=139, 1927.2pt x 964.60374pt>
 File: images/sids_step2.png Graphic file (type png)
 <use images/sids_step2.png>
 Package pdftex.def Info: images/sids_step2.png  used on input line 258.
 (pdftex.def)             Requested size: 396.91325pt x 198.65761pt.
-<images/sids_step3.png, id=138, 1927.2pt x 964.60374pt>
+<images/sids_step3.png, id=140, 1927.2pt x 964.60374pt>
 File: images/sids_step3.png Graphic file (type png)
 <use images/sids_step3.png>
 Package pdftex.def Info: images/sids_step3.png  used on input line 265.
@@ -593,25 +599,25 @@ s been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
 l.272 
-       <docs/images/sids_step2.png (PNG copy)> <docs/images/sids_step3.png (PNG
- copy)>]
+       <./images/sids_step2.png (PNG copy)> <./images/sids_step3.png (PNG copy)
+>]
 LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 2
 76.
  (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2022/07/10 v2.5l Standard LaTeX font definitions
 ) [11]
-(docs/informe_moran.aux)
+(./informe_moran.aux)
 Package rerunfilecheck Info: File `informe_moran.out' has not changed.
 (rerunfilecheck)             Checksum: 3D83835EB22A4E477962EEF62FBAB9D1;3499.
  ) 
 Here is how much of TeX's memory you used:
- 11904 strings out of 477950
- 182925 string characters out of 5838504
+ 11906 strings out of 477950
+ 182962 string characters out of 5838504
  1861388 words of memory out of 6000000
- 31875 multiletter control sequences out of 15000+600000
- 528819 words of font info for 67 fonts, out of 8000000 for 9000
+ 31879 multiletter control sequences out of 15000+600000
+ 527273 words of font info for 65 fonts, out of 8000000 for 9000
  34 hyphenation exceptions out of 8191
- 75i,15n,76p,586b,574s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,15n,76p,581b,574s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texli
@@ -621,16 +627,15 @@ onts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/t
 ype1/public/cm-super/sfbi1200.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
 blic/cm-super/sfbx1200.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/cm
 -super/sfbx1440.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/cm-super/
-sfbx2074.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/cm-super/sfbx248
-8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><
-/usr/share/texlive/texmf-dist/fonts/type1/public/cm-super/sfti1095.pfb></usr/sh
-are/texlive/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb></usr/share/tex
-live/texmf-dist/fonts/type1/public/cm-super/sfti1440.pfb></usr/share/texlive/te
-xmf-dist/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on docs/informe_moran.pdf (11 pages, 1213910 bytes).
+sfbx2074.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/cm-super/sfrm120
+0.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/cm-super/sfti1095.pfb><
+/usr/share/texlive/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb></usr/sh
+are/texlive/texmf-dist/fonts/type1/public/cm-super/sfti1440.pfb></usr/share/tex
+live/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb>
+Output written on informe_moran.pdf (11 pages, 1230235 bytes).
 PDF statistics:
- 235 PDF objects out of 1000 (max. 8388607)
- 181 compressed objects within 2 object streams
+ 233 PDF objects out of 1000 (max. 8388607)
+ 179 compressed objects within 2 object streams
  41 named destinations out of 1000 (max. 500000)
- 143 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 148 words of extra memory for PDF output out of 10000 (max. 10000000)
 
